@@ -1,327 +1,298 @@
 
-
 <!DOCTYPE html>
-<html lang="en" >
+<html lang='en' class=''>
 
 <head>
 
+  <meta charset='UTF-8'>
+  <title>.</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://u.cubeupload.com/BrunoT/divertido.png">
+  <link rel="mask-icon" href="https://u.cubeupload.com/BrunoT/divertido.png" color="#111">
+  
+
   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="sara mazal lessons">
+<meta name="keywords" content="HTML, CSS, JavaScript, mazal, icons">
+<meta name="author" content="Sara Mazal">
+<!--  SGVsbG8hIE15IG5hbWUgaXMgU2FyYSBNYXphbC4gV2VsY29tZSB0byBteSBDb2RlUGVuIQ== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- SGVsbG8hIE15IG5hbWUgaXMgU2FyYSBNYXphbC4gV2VsY29tZSB0byBteSBDb2RlUGVuOiBodHRwczovL2NvZGVwZW4uaW8vU2FyYW1hemFsICYgR2l0SHViOiBodHRwczovL2dpdGh1Yi5jb20vc2FyYW1hemFs -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
   
-  <link rel="apple-touch-icon" type="image/png" href="https://u.cubeupload.com/BrunoT/divertido.png" />
-
-  <meta name="apple-mobile-web-app-title" content="Bruno">
-
-  <link rel="shortcut icon" type="image/x-icon" href="https://u.cubeupload.com/BrunoT/divertido.png" />
-
-  <link rel="mask-icon" type="image/x-icon" href="https://u.cubeupload.com/BrunoT/divertido.png" color="#111" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 
-  
-  <title>BrunoT</title>
-  
-  <head>
-  
-  <style>
-    body {
-      background-color: #000000;
-    }
-  </style>
-</head>
-  
-  <head>
-  <title></title>
-  <style>
-    .cor-destacada {
-      color: #ffffff;
-    }
-  </style>
-</head>
 
-  
-<style>
-div.conteudo {
-  font-family: 'Anton', sans-serif;
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ROBOTO", sans-serif;
+}
+
+.nav,
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+  position: relative;
+  background-color: #1e1f26;
+  text-align: center;
+  padding: 0 2em;
+}
+
+.nav h1,
+.slider h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5vw;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.5rem;
+  color: #c8a2c8;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+h1:hover {
+  transform: translate3d(0, -10px, 22px);
+  color: #ff0266;
+}
+
+.slider h2 {
+  font-size: 2vw;
+  letter-spacing: 0.3rem;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 300;
+  color: #faebd7;
+  z-index: 4;
+}
+h3.span {
+  font-size: 2vw;
+  letter-spacing: 0.7em;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 300;
+  color: #faebd7;
+  z-index: 4;
+}
+span:hover {
+  color: #ff0266;
+  font-weight: 500;
+  font-size: 2.2vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: #1e1f26;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.divisor{
-  margin-top: 10px;
-  opacity: 0.3;
+.nav-container--top-first {
+  position: fixed;
+  top: 75px;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-div.pais img {
-  margin: 0 0 10px 0;
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  display: inline-block;
-  font-size: 3vw;
-  text-align: center;
+.nav-container--top-second {
+  position: fixed;
+  top: 0;
 }
-
-div.pais.alianca img {
-  width: 70px;
-  height: 70px;
-   margin: 0 15px 0 15px;
-}
-
-div.filho img {
-  margin: 20px 20px 10px 20px; 
-  border-radius: 100%;
-  display: inline-block;
-  font-size: 3vw;
-  text-align: center;
-}
-div .filho .son {
-    width: 140px;
-    height: 140px;
-}
-
-.figure {
-  display: inline-block;
-  width: 5%;
-  text-align: center;
-  border: none;
-}
-
-.figure.botao {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-.figure.botao img{
-    padding: 1px 1px 1px 1px;
-}
-.figure.botao :hover{
-    cursor: pointer;
-}
-
-.legenda{
-  align-items: center;
+.nav-tab {
   display: flex;
-  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #03dac6;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 2vw;
 }
 
-.father {
-   background-color: #A9D0F5;
+.nav-tab:hover {
+  color: #1e1f26;
+  background: #03dac6;
+  transition: all 0.5s ease;
 }
 
-.mother {
-  background-color: #DA81F5;
+.nav-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #03dac6;
+  transition: left 0.3s ease;
 }
-
-.son {
-  background-color: #fff;
+.background {
+  position: absolute;
+  height: 90vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: auto;
 }
-
-.divfilho{
-    margin-left:5%;
-}
-
- .painel-animado {
-    -moz-transition:transform 0.8s;
-    -webkit-transition:transform 0.8s;
-    -ms-transition:transform 0.8s;
-    -o-transition:transform 0.8s;
-    transition:transform 0.8s;
-}
-
-.painel-animado.ng-leave-active {
-  -moz-transform: scale(0.1);
-  -webkit-transform: scale(0.1);
-  -ms-transform: scale(0.1);
-  -o-transform: scale(0.1);
-  transform: scale(0.1);
-}
-</style>
-
-  <script>
-  window.console = window.console || function(t) {};
-</script>
-
-  
-  
-  <script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
+@media (min-width: 800px) {
+  .nav h1,
+  .slider h1 {
+    font-size: 5vw;
   }
-</script>
 
+  .nav h2,
+  .slider h2 {
+    font-size: 3vw;
+  }
 
+  .nav-tab {
+    font-size: 3vw;
+  }
+}
+
+@media screen only (min-width: 360px) {
+  .nav h1,
+  .slider h1 {
+    font-size: 8vw;
+  }
+
+  .nav h2,
+  .slider h2 {
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+  }
+
+  .nav-tab {
+    font-size: 1.2vw;
+  }
+}
+.background {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+.loader span {
+  color: #faebd7;
+  text-shadow: 0 0 0 #faebd7;
+  -webkit-animation: loading 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes loading {
+  to {
+    text-shadow: 20px 0 70px #ff0266;
+    color: #ff0266;
+  }
+}
+.loader span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+}
+.loader span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+}
+.loader span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+}
+.loader span:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+}
+.loader span:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+}
+.loader span:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+}
+.loader span:nth-child(8) {
+  -webkit-animation-delay: 0.7s;
+}
+.loader span:nth-child(9) {
+  -webkit-animation-delay: 0.8s;
+}
+
+.loader span:nth-child(10) {
+  -webkit-animation-delay: 0.9s;
+}
+.loader span:nth-child(11) {
+  -webkit-animation-delay: 1s;
+}
+.loader span:nth-child(12) {
+  -webkit-animation-delay: 1.1s;
+}
+.loader span:nth-child(13) {
+  -webkit-animation-delay: 1.2s;
+}
+.loader span:nth-child(14) {
+  -webkit-animation-delay: 1.3s;
+}
+.loader span:nth-child(15) {
+  -webkit-animation-delay: 1.4s;
+}
+.loader span:nth-child(16) {
+  -webkit-animation-delay: 1.5s;
+}
+.loader span:nth-child(17) {
+  -webkit-animation-delay: 1.6s;
+}
+.loader span:nth-child(18) {
+  -webkit-animation-delay: 1.7s;
+}
+.loader span:nth-child(19) {
+  -webkit-animation-delay: 1.8s;
+}
+.loader span:nth-child(20) {
+  -webkit-animation-delay: 1.9s;
+}
+.loader span:nth-child(21) {
+  -webkit-animation-delay: 2s;
+}
+.loader span:nth-child(22) {
+  -webkit-animation-delay: 2.1s;
+}
+
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6bce046e7128ddf9391ccf7acbecbf7ce0cbd7b6defbeb2e217a867f51485d25.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
 </head>
 
-<body translate="no" >
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-</head>
-<body ng-app="MyApp" ng-cloak>
-    <div class="main" ng-controller="genealogyController">
-        <div class="conteudo">
-            <div class="pais">
-              <img src="{{pai.foto}}" class="father" />
-              <label class="legenda"><body>
-  <p><span class="cor-destacada">Bender</span>.</p>
-</body></label>
-            </div>
+<body> 
+  <div id="particles-js"></div> </budy
 
-            <div class="pais alianca">
-              <img src="https://u.cubeupload.com/BrunoT/aliana.png" width="40" height="40">
-              <label class="legenda"><body>
-  <p><span class="cor-destacada">Casados</span>.</p>
-</body></label>
-            </div>
-
-            <div class="pais">
-                <img src="https://u.cubeupload.com/BrunoT/Screenshot8removebgp.png" class="mother" />
-                <label class="legenda"><body>
-  <p><span class="cor-destacada">Angie</span>.</p>
-</body></label>
-            </div>
-        </div>
-
-        <div class="conteudo divisor" ng-show="filhos.length">
-            <div class=figure>
-              <img src="https://u.cubeupload.com/BrunoT/pngegg.png" width="90" height="90">
-              <label><body>
-  <p><span class="cor-destacada">Benção</span>.</p>
-</body></label>
-            </div>
-        </div>
-        <div class="conteudo" ng-show="!filhos.length">
-            <div class=figure ng-click="adicionarFilho()">
-                <img src="https://www.shareicon.net/data/512x512/2016/08/18/809318_add_512x512.png" width="80%" height="80%">
-                <label>Adicionar Filhos</label>
-            </div>
-        </div>
-        <div class="conteudo divfilho" ng-if="filhos.length">
-            <div class="filho" ng-repeat="filho in filhos">
-              <img src="{{filho.foto}}" class="son"/>
-              <label class="legenda">{{filho.nome}}</label>
-            </div>  
-            <div class="figure botao">
-              <img src="https://www.shareicon.net/data/512x512/2016/08/18/809318_add_512x512.png" ng-click="adicionarFilho()" width="30" height="30">
-              <img src="https://www.shareicon.net/download/2016/07/07/792199_mathematics_512x512.png" ng-click="removeFilho()" width="30" height="30">
-            </div>
-        </div>
-    </div>
-</body>
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.js'></script>
-      <script id="rendered-js" >
-angular.module("MyApp", []).
-controller("genealogyController", ['$scope', '$http', 'genelogyFactory', function ($scope, $http, genelogyFactory) {
-  var pai = {
-    foto: 'https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png',
-    nome: 'Homem' };
-
-
-  var mae = {
-    foto: 'https://u.cubeupload.com/BrunoT/Screenshot8removebgp.png',
-    nome: 'Mulher' };
-
-
-  var filho = [
-  {
-    foto: 'https://u.cubeupload.com/BrunoT/Screenshot9removebgp.png',
-    nome: 'Filho' },
-
-  {
-    foto: 'https://u.cubeupload.com/BrunoT/Screenshot9removebgp.png',
-    nome: 'Filho' },
-
-	  {
-    foto: 'https://u.cubeupload.com/BrunoT/Screenshot9removebgp.png',
-    nome: 'Filho' },
-	  
-  {
-    foto: 'https://u.cubeupload.com/BrunoT/Screenshot9removebgp.png',
-    nome: 'Filho' }];
-
-
-
-  genelogyFactory.setPai(pai);
-  genelogyFactory.setMae(mae);
-  genelogyFactory.setFilhos(filho);
-
-  $scope.pai = genelogyFactory.getPai();
-  $scope.mae = genelogyFactory.getMae();
-  $scope.filhos = genelogyFactory.getFilhos();
-
-  $scope.adicionarFilho = function () {
-    var fil =
-    {
-      foto: 'https://u.cubeupload.com/BrunoT/Screenshot9removebgp.png',
-    nome: 'Filho',
-      nome: 'Filho' };
-
-
-    genelogyFactory.addFilhos(fil);
-  };
-
-  $scope.removeFilho = function () {
-    genelogyFactory.removeFilhos();
-  };
-
-}]).
-factory('genelogyFactory', [function () {
-  var _pai = {};
-  var _mae = {};
-  var _filhos = [];
-
-  function _setPai(pai) {
-    _pai = pai;
-  }
-
-  function _getPai() {
-    return _pai;
-  }
-
-  function _setMae(mae) {
-    _mae = mae;
-  }
-
-  function _getMae() {
-    return _mae;
-  }
-
-  function _setFilhos(filhos) {
-    _filhos = filhos;
-  }
-
-  function _getFilhos() {
-    return _filhos;
-  }
-
-  function _addFilhos(filho) {
-    _filhos.push(filho);
-  }
-
-  function _removeFilhos() {
-    _filhos.splice(0, 1);
-  }
-  return {
-    setPai: _setPai,
-    getPai: _getPai,
-    setMae: _setMae,
-    getMae: _getMae,
-    setFilhos: _setFilhos,
-    getFilhos: _getFilhos,
-    addFilhos: _addFilhos,
-    removeFilhos: _removeFilhos };
-
-
-}]);
-//# sourceURL=pen.js
-    </script>
-
+<body></body>  
+<sectio class="nav">
+  <h1>@Angie 👑</h1>
+  <h3 class="span loader"><span class="m">X</span><span class="m">A</span><span class="m">T</span><span class="m">.</span><span class="m">C</span><span class="m">O</span><span class="m">M</span><span class="m">/</span><span class="m">V</span><span class="m">T</span><span class="m">O</span><span class="m"></span></h3>
+</sectio><!-- SGVsbG8hIE15IG5hbWUgaXMgU2FyYSBNYXphbC4gV2VsY29tZSB0byBteSBDb2RlUGVuIQ== -->
   
 
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script  src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-61933845-9898-e23c-3d73-87e70f93222a" crossorigin></script>
 </body>
 
 </html>
- 
