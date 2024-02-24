@@ -58,7 +58,7 @@ const destinations = [
   {
     name: "Aиgιιε",
     location: "(379626375)",
-    img: "https://i.imgur.com/jsyl8dB.png"
+    img: "https://i.imgur.com/hTrPzZQ.png"
   },
   {
     name: "Aиgιιε",
